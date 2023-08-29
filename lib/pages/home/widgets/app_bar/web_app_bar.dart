@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_responsivo/pages/home/widgets/app_bar/web_app_bar_responsive_content.dart';
 
 class WebAppBar extends StatelessWidget {
   const WebAppBar({super.key});
@@ -10,28 +11,33 @@ class WebAppBar extends StatelessWidget {
       toolbarHeight: 72,
       title: Row(
         children: [
-          Text(
+          const Text(
             'Flutter',
             style: TextStyle(color: Colors.white),
           ),
-          SizedBox(
+          const SizedBox(
             width: 32,
           ),
-          Expanded(child: Container()),
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
+          const WebAppBarResponsiveContent(),
+          // Expanded(child: Container()),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.shopping_cart),
+            color: Colors.white,
+          ),
           const SizedBox(
             width: 24,
           ),
           OutlinedButton(
             onPressed: () {},
-            child: Text("Fazer login"),
+            child: const Text("Fazer login"),
           ),
           const SizedBox(
             width: 8,
           ),
           OutlinedButton(
             onPressed: () {},
-            child: Text("cadastrar"),
+            child: const Text("cadastrar"),
           )
         ],
       ),
